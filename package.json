@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "npm run build && node --env-file=.env ./dist/index.js",
-    "package": "rm -rf dist && ncc build ./src/index.ts",
-    "build": "npx @vercel/ncc build && npx convert-action"
+    "package": "rm -rf dist && ncc build ./src/index.ts -m -s",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
