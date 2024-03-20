@@ -1,6 +1,9 @@
 name: 'PointFire Localizer'
 description: 'Translate your SharePoint Framework localization files'
 author: 'IceFire Studios Corp.'
+branding:
+  icon: 'flag'
+  color: 'blue'
 inputs:
   api-key:
     description: 'The API key for the Azure Translator service'
