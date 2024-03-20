@@ -1,26 +1,26 @@
-name: 'PointFire Localizer'
-description: 'Translate your SharePoint Framework localization files'
-author: 'IceFire Studios Corp.'
+name: PointFire Localizer
+description: Translate your SharePoint Framework localization files
+author: IceFire Studios Corp.
 branding:
-  icon: 'flag'
-  color: 'blue'
+  icon: flag
+  color: blue
 inputs:
   api-key:
-    description: 'The API key for the Azure Translator service'
+    description: The API key for the Azure Translator service
     required: true
   api-region:
-    description: 'The region of the Azure Translator service'
+    description: The region of the Azure Translator service
     required: true
   api-url:
-    description: 'The URL of the Azure Translator service'
-    default: 'https://api.cognitive.microsofttranslator.com'
+    description: The URL of the Azure Translator service
+    default: https://api.cognitive.microsofttranslator.com
   default-locale:
-    description: 'The default locale of the localization files'
-    default: 'en-us'
+    description: The default locale of the localization files
+    default: en-us
   locales:
-    description: 'Define the locales to translate to (comma separated)'
+    description: Define the locales to translate to (comma separated)
   summary:
-    description: 'Write to the GitHub Action Job Summary'
+    description: Write to the GitHub Action Job Summary
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: node20
+  main: dist/index.js
