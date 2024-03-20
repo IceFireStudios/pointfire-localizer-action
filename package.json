@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "npm run build && node --env-file=.env ./dist/index.js",
-    "package": "rm -rf dist && ncc build ./src/index.ts -m -s",
+    "package": "rm -rf dist && ncc build ./src/index.ts -m",
     "build": "tsc"
   },
   "keywords": [],
