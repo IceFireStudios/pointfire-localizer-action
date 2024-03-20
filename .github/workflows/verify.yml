@@ -1,0 +1,32 @@
+name: Verify localization action
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  localization-test:
+    runs-on: ubuntu-latest
+    name: Testing out the localization action
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - run: npm ci && npm run package
+
+      - name: Test action without locales
+        uses: ./ # Uses an action in the root directory
+        with:
+          api-key: ${{ secrets.TRANSLATOR_API_KEY }}
+          api-region: "westeurope"
+          default-locale: en-us
+          summary: true
+
+      - name: Test action with locales
+        uses: ./ # Uses an action in the root directory
+        with:
+          api-key: ${{ secrets.TRANSLATOR_API_KEY }}
+          api-region: "westeurope"
+          default-locale: en-us
+          locales: "nl-nl,fr-fr,de-de"
+          summary: true
