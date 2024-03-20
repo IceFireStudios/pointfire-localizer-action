@@ -38,11 +38,12 @@ The PointFire Localizer is a GitHub Action which allows you to localize your Sha
 ## Example usage
 
 ```yaml
-uses: IceFireStudios/pointfire-localizer@v1
-with:
-  api-key: ${{ secrets.TRANSLATOR_API_KEY }}
-  api-region: "westeurope"
-  default-locale: "en-us"
-  locales: "nl-nl,fr-fr,de-de"
-  summary: true
+- name: PointFire Localizer
+  uses: IceFireStudios/pointfire-localizer-action@v1.0.0       
+  with:
+    api-key: ${{ secrets.TRANSLATOR_API_KEY }}
+    api-region: "westeurope"
+    default-locale: "en-us"
+    locales: "nl-nl,fr-fr,de-de"
+    summary: true
 ```
