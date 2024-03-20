@@ -39,7 +39,7 @@ The PointFire Localizer is a GitHub Action which allows you to localize your Sha
 
 ```yaml
 - name: PointFire Localizer
-  uses: IceFireStudios/pointfire-localizer-action@v1.0.0       
+  uses: IceFireStudios/pointfire-localizer-action@v1.0.0
   with:
     api-key: ${{ secrets.TRANSLATOR_API_KEY }}
     api-region: "westeurope"
